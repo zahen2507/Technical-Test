@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     word-spacing: 1px;
-    color: #374151;
+    /* color: #374151; */
     font-size: 16px;
   }
 
@@ -14,6 +14,9 @@
     margin: 0;
     font-size: 16px;
     box-sizing: border-box;
+    background: linear-gradient(to bottom, #4a445a 30%, #cccbcb 100%, #cccbcb 100%);
+    background-color: #cccbcb;
+    background-repeat: no-repeat;
   }
 
   .pricing-container {
@@ -28,6 +31,7 @@
     text-align: center;
     margin: 2rem auto 2rem auto;
     max-width: 700px;
+    color: #fff;
   }
 
   .pricing {
@@ -40,15 +44,21 @@
     padding: 0;
     margin: 2rem 1rem;
     width: 400px;
-    height: 300px;
     max-width: 300px;
+    height: 350px;
     border: 1px solid #e5e7eb;
     box-shadow: 0 4px 6 -1px rgba(0 0 0 / 0.1), 0 2px 4px -2px rgba(0 0 0 /0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease;
+  }
+
+  .plan:hover {
+    transform: scale(1.1); /* Memperbesar elemen saat hover */
   }
 
   .plan-header {
     background: #414751;
-    height: 40px;
+    height: 50px;
   }
 
   .plan-header h3 {
@@ -65,6 +75,15 @@
     justify-content: center;
   }
 
+  .plan-content p {
+    margin: 2rem;
+    text-align: center;
+  }
+
+  .plan-content hr {
+    margin: 1rem;
+  }
+
   .price {
     margin: 0;
     color: #374151;
@@ -75,3 +94,53 @@
     font-weight: bold;
   }
   
+  .plan ul {
+    list-style-type: none;
+    margin-top: 30px;
+  }
+
+  .plan-button {
+    margin-top: 1rem;
+    margin-left: 25%;
+    padding: 0.6rem 2rem;
+    background-color: rgb(31, 120, 209);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 0.5rem;
+    width: 50%;
+    cursor: pointer;
+  }
+
+  .faq h1{
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  .faq-row {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    gap: 30px;
+    margin-left: 200px;
+  }
+
+  /* Kode CSS sebelumnya */
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #f1f3f2;
+  color: #030306;
+  padding: 10px 20px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.notification.show {
+  opacity: 1;
+}
